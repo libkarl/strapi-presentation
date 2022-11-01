@@ -6,25 +6,5 @@
     "description": ""
   },
   "options": {},
-  "attributes": {
-    "development": {
-      "displayName": "service",
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.service",
-      "required": true
-    },
-    "design": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.service",
-      "required": true
-    },
-    "backend": {
-      "type": "component",
-      "repeatable": false,
-      "component": "homepage.service",
-      "required": true
-    }
-  }
+  "attributes": {}
 }

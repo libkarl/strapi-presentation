@@ -15,9 +15,7 @@
     "components": {
       "type": "dynamiczone",
       "components": [
-        "homepage.hero",
         "homepage.testimonials",
-        "homepage.team",
         "homepage.services"
       ],
       "required": true
