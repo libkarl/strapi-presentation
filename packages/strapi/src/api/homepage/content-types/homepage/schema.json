@@ -16,7 +16,7 @@
       "type": "dynamiczone",
       "components": [
         "homepage.testimonials",
-        "homepage.services"
+        "homepage.introduction"
       ],
       "required": true
     }

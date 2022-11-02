@@ -2,7 +2,7 @@
 import Image from "next";
 import React from "react";
 import Link from "next/link";
-import Client from "components/Client";
+import Client from "components/Generics/Homepage/Client";
 import { ClientProps, TestimonialProps } from "models/testimonials";
 
 const Testimonials = (props: TestimonialProps) => {

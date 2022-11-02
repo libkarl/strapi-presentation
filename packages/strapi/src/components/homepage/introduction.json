@@ -1,22 +1,26 @@
 {
-  "collectionName": "components_homepage_clients",
+  "collectionName": "components_homepage_introductions",
   "info": {
-    "displayName": "client",
-    "icon": "baby",
+    "displayName": "Introduction",
+    "icon": "award",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "company": {
+    "title": {
       "type": "string",
       "required": true
     },
     "text": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
+    },
+    "focuses": {
+      "displayName": "focuses",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.focuses",
+      "required": true
     },
     "image": {
       "allowedTypes": [

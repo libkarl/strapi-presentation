@@ -7,19 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "clients": {
-      "displayName": "client",
-      "type": "component",
-      "repeatable": true,
-      "component": "homepage.client",
-      "required": true
-    },
     "title": {
       "type": "string",
       "required": true
     },
     "text": {
       "type": "richtext",
+      "required": true
+    },
+    "clients": {
+      "displayName": "clients",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.clients",
       "required": true
     }
   }

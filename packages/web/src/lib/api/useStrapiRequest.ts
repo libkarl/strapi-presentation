@@ -64,3 +64,39 @@ const useStrapiRequest = <Data = unknown, Error = unknown>(
 };
 
 export default useStrapiRequest;
+
+export async function fetchPageData(name: string) {
+  if (!name) {
+    throw new Error("missing page name");
+  }
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${name}?populate=deep`
+  );
+  const json = await response.json();
+  return json;
+}
+
+export async function fetchPageData2(name: string) {
+  const options = {
+    method: "get",
+    url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${name}?populate=deep`,
+  };
+  const response = await axios(options).then((res) => {
+    return res.data;
+  });
+  return response;
+}
+
+export function usePageData2(name: string) {
+  return useSWR([name], async (name) => {
+    return fetchPageData2(name);
+  });
+}
+
+export function usePageData(name: string) {
+  const { data, error } = useSWR([name], async (name) => {
+    return fetchPageData(name);
+  });
+
+  return { data, error };
+}

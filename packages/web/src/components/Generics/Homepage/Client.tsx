@@ -14,7 +14,7 @@ const Client = (props: ClientProps) => {
             <img
               src={
                 process.env.NEXT_PUBLIC_STRAPI_URL +
-                props.image.data.attributes.url
+                props.image?.data.attributes.url
               }
               alt="Agon"
             />

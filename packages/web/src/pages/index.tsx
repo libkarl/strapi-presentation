@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Introduction />
+        {/* <Introduction /> */}
         {/* <Testimonials /> */}
         <Latestnews />
         <Contact />
