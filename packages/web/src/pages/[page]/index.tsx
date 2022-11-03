@@ -1,14 +1,17 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from "components/Layout/Layout";
 import React from "react";
-import { homePageImportObject, aboutPageImportObject } from "components";
+import { v4 } from "uuid";
+import {
+  homePageImportObject,
+  aboutPageImportObject,
+} from "models/dynamic-imports";
 import useStrapiRequest, {
   usePageData,
   usePageData2,
 } from "lib/api/useStrapiRequest";
 import { NextRouter } from "next/dist/client/router";
-
-import Error from "components/404";
+import Error from "components/Elements/404";
 import { HomePageComponents, AboutPageComponents } from "models/pages";
 
 export async function getServerSideProps(router: NextRouter) {
@@ -34,14 +37,14 @@ const DynamicPage = ({ params }: any) => {
             if (!Component) {
               return null;
             }
-            return <Component key={e.id} {...e} />;
+            return <Component key={v4()} {...e} />;
           } else if (params.page === "about") {
             const pageKind: AboutPageComponents = { Type: e.__component };
             const Component = aboutPageImportObject[pageKind.Type];
             if (!Component) {
               return null;
             }
-            return <Component key={e.id} {...e} />;
+            return <Component key={v4()} {...e} />;
           }
         })}
       </Layout>

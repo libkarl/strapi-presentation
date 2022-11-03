@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_homepage_articles",
+  "info": {
+    "displayName": "Article",
+    "icon": "balance-scale"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "introduction": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

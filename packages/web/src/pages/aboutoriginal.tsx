@@ -4,106 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import CounterUp from "../components/Elements/CounterUp";
 import Layout from "../components/Layout/Layout";
-import TeamSlider from "../components/Team";
+import TeamSlider from "../components/Generics/Team";
 
 function About() {
   return (
     <>
       <Layout>
-        <section className="section-box">
-          <div className="banner-hero banner-2 bg-about-1">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-7">
-                  <span className="tag-1 color-orange-900">
-                    What We Do, What You Get
-                  </span>
-                  <h1 className="text-display-3 mt-30">
-                    A small creative team excited to create beautiful things
-                  </h1>
-                  <p className="text-body-lead-large color-gray-500 mt-40 pr-40">
-                    Integrated workflow designed for product teams. We create
-                    world-class development and branding
-                  </p>
-                  <div className="mt-40">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-black shape-square icon-arrow-right-white">
-                        Join Our Team
-                      </a>
-                    </Link>
-
-                    <Link href="/page-contact">
-                      <a className="btn btn-link color-gray-900 icon-arrow-right text-heading-6">
-                        Contact Us
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-lg-5 d-none d-lg-block">
-                  <div className="banner-imgs">
-                    <div className="block-1 shape-1">
-                      <img
-                        src="/assets/imgs/page/about/1/banner2.png"
-                        alt="Agon"
-                      />
-                    </div>
-                    <img
-                      className="img-responsive shape-2"
-                      alt="Agon"
-                      src="assets/imgs/page/about/1/banner1.png"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="section-box mt-100">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-1" />
-              <div className="col-lg-10">
-                <div className="bd-bottom pb-20 mb-40 text-mb-center">
-                  <div className="row">
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={6} time={3} />
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40t">
-                        Years in Business
-                      </p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={14} time={3} />k
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40">
-                        Projects Done
-                      </p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={26} time={3} />
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40">
-                        Countries / Offices
-                      </p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={24} time={3} />k
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40">
-                        Constant Clients
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-1" />
-            </div>
-          </div>
-        </div>
         <section className="section-box mt-100">
           <div className="container">
             <div className="row">
@@ -182,11 +88,6 @@ function About() {
         </section>
         <section className="section-box mt-100">
           <div className="container">
-            <div className="text-center mb-20">
-              <span className="tag-1 bg-6 color-green-900">
-                What We Do, What You Get
-              </span>
-            </div>
             <div className="row">
               <div className="col-lg-2 col-sm-1 col-12" />
               <div className="col-lg-8 col-sm-10 col-12 text-center">
@@ -219,13 +120,6 @@ function About() {
                     in teir craft! All products were super amazing with strong
                     attension to details, comps and overall vibe.
                   </p>
-                  <div className="mt-30">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-default icon-arrow-right">
-                        Learn more
-                      </a>
-                    </Link>
-                  </div>
                 </div>
               </div>
               <div className="col-lg-4 col-sm-12">
@@ -242,13 +136,6 @@ function About() {
                     in teir craft! All products were super amazing with strong
                     attension to details, comps and overall vibe.
                   </p>
-                  <div className="mt-30">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-default icon-arrow-right">
-                        Learn more
-                      </a>
-                    </Link>
-                  </div>
                 </div>
               </div>
               <div className="col-lg-4 col-sm-12">
@@ -265,13 +152,6 @@ function About() {
                     in teir craft! All products were super amazing with strong
                     attension to details, comps and overall vibe.
                   </p>
-                  <div className="mt-30">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-default icon-arrow-right">
-                        Learn more
-                      </a>
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>

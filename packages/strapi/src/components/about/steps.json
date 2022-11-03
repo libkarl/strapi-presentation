@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_steps",
+  "info": {
+    "displayName": "steps",
+    "icon": "backward"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

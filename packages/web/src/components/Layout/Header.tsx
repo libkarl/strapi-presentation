@@ -49,7 +49,7 @@ const Header = (props: HeaderProps) => {
                 <nav className="nav-main-menu d-none d-xl-block">
                   <ul className="main-menu">
                     <li>
-                      <Link href="/">Home</Link>
+                      <Link href="/homepage">Home</Link>
                     </li>
                     <li>
                       <a onClick={() => router.push("/about")}>About</a>

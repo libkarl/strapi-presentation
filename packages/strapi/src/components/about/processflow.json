@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_processflows",
+  "info": {
+    "displayName": "processflow",
+    "icon": "arrow-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "steps": {
+      "displayName": "steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.steps",
+      "required": true,
+      "max": 3
+    }
+  }
+}

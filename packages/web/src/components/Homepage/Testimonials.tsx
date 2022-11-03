@@ -2,8 +2,14 @@
 import Image from "next";
 import React from "react";
 import Link from "next/link";
-import Client from "components/Generics/Homepage/Client";
-import { ClientProps, TestimonialProps } from "models/testimonials";
+import Client, { ClientProps } from "components/Generics/Client";
+export interface TestimonialProps {
+  id: number;
+  __component: string;
+  title: string;
+  text: string;
+  clients: ClientProps[];
+}
 
 const Testimonials = (props: TestimonialProps) => {
   return (

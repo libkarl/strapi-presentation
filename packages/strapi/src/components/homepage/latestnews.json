@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_homepage_latestnews",
+  "info": {
+    "displayName": "Latestnews",
+    "icon": "assistive-listening-systems"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

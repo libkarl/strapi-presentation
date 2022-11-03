@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Layout from "./Layout/Layout";
+import Layout from "../Layout/Layout";
 
 function Error() {
   return (

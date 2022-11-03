@@ -25,25 +25,16 @@ export let homePageImportObject = {
 };
 
 export let aboutPageImportObject = {
-  "homepage.testimonials": dynamic(
-    () => import("components/Homepage/Testimonials"),
-    {
-      suspense: true,
-    }
-  ),
-  "homepage.contact": dynamic(() => import("components/Homepage/Contact"), {
+  "about.banner": dynamic(() => import("components/About/Banner"), {
     suspense: true,
   }),
-  "homepage.introduction": dynamic(
-    () => import("components/Homepage/Introduction"),
-    {
-      suspense: true,
-    }
-  ),
-  "homepage.latestnews": dynamic(
-    () => import("components/Homepage/Latestnews"),
-    {
-      suspense: true,
-    }
-  ),
+  "about.processflow": dynamic(() => import("components/About/Processflow"), {
+    suspense: true,
+  }),
+  "about.workingfocus": dynamic(() => import("components/About/Workingfocus"), {
+    suspense: true,
+  }),
+  "about.team": dynamic(() => import("components/About/Team"), {
+    suspense: true,
+  }),
 };

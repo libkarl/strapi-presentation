@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_teams",
+  "info": {
+    "displayName": "team",
+    "icon": "baby-carriage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "members": {
+      "displayName": "members",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.members",
+      "required": true,
+      "min": 8
+    }
+  }
+}

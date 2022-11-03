@@ -1,20 +1,4 @@
-export interface TestimonialProps {
-  id: number;
-  __component: string;
-  title: string;
-  text: string;
-  clients: ClientProps[];
-}
-
-export interface ClientProps {
-  id: number;
-  name: string;
-  company: string;
-  text: string;
-  image: Image;
-}
-
-export interface Image {
+export interface ImageInterface {
   data: Data;
 }
 

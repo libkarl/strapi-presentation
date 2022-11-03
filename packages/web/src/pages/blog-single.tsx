@@ -31,36 +31,6 @@ function BlogSingle() {
           <section className="section-box mt-50 mb-50">
             <div className="container">
               <div className="row">
-                <div className="col-lg-1 col-md-12" />
-                <div className="col-lg-1 col-md-2 col-sm-2 col-3 text-center">
-                  <div className="social-sticky">
-                    <h3 className="text-heading-6 color-gray-400 mb-20 mt-5">
-                      Share
-                    </h3>
-                    <Link href="/https://facebook.com">
-                      <a className="share-social share-fb"></a>
-                    </Link>
-                    <br />
-                    <Link href="/https://twitter.com">
-                      <a className="share-social share-tw"></a>
-                    </Link>
-                    <br />
-                    <Link href="/https://www.pinterest.com">
-                      <a className="share-social share-pi"></a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="col-lg-8 col-md-8 col-sm-10 col-9">
-                  <div className="text-summary">
-                    The fancy moon going in little artist painting. Thirty days
-                    of lavender in the dreamy light inside. Other perfect oh
-                    plants, for and again. I’ve honey feeling. Caring dreamland
-                    projects noteworthy than minimal, their it oh pretty feeling
-                    may. Include pink be.
-                  </div>
-                </div>
-              </div>
-              <div className="row">
                 <div className="col-lg-2" />
                 <div className="col-lg-8">
                   <div className="row">

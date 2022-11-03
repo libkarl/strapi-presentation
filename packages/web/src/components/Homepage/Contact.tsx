@@ -1,7 +1,18 @@
 import React from "react";
-import Link from "next/link";
+import { Address } from "models/address";
+import AddressComponent from "components/Generics/Address";
 
-const Contact = () => {
+interface ContactProps {
+  id: number;
+  __component: string;
+  label: string;
+  title: string;
+  paragraph: string;
+  quote: string;
+  address: Address[];
+}
+
+const Contact = (props: ContactProps) => {
   return (
     <section className="section-box">
       <div className="container mb-50 mt-70">
@@ -9,29 +20,20 @@ const Contact = () => {
           <div className="row">
             <div className="col-lg-12 mb-60">
               <span className="text-body-capitalized text-uppercase">
-                Contact us
+                {props.label}
               </span>
               <h2 className="text-heading-3 color-gray-900 mt-10">
-                Have an prject in mind?
+                {props.title}
               </h2>
               <p className="text-body-text color-gray-600 mt-20">
-                The right move at the right time saves your investment.
+                {props.paragraph}
                 <br className="d-lg-block d-none" />
-                live the dream of expanding your business.
+                {props.quote}
               </p>
             </div>
-            <div className="col-lg-4 mb-40">
-              <h4 className="text-heading-6 color-gray-900 icon-home mb-10 mt-10">
-                Agon Studio
-              </h4>
-              <p className="text-body-text color-gray-600">
-                4517 Washington Ave.
-                <br />
-                Manchester, Kentucky 39495
-              </p>
-              <p className="text-body-text color-gray-600">(239) 555-0108</p>
-              <p className="text-body-text color-gray-600">contact@agon.com</p>
-            </div>
+            {props.address.map((item) => {
+              return <AddressComponent key={item.id} {...item} />;
+            })}
             <div className="col-lg-8">
               <div className="row">
                 <div className="col-lg-6">

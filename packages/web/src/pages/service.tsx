@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import OfferSlider from "../components/Offer";
+import OfferSlider from "../components/Generics/Offer";
 
 function Service2() {
   return (

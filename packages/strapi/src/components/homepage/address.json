@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_homepage_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "addressline1": {
+      "type": "string",
+      "required": true
+    },
+    "addressline2": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

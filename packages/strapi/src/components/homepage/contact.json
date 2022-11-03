@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_homepage_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "paragraph": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "displayName": "address",
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.address",
+      "required": true
+    },
+    "quote": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

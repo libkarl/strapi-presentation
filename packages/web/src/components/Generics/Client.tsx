@@ -1,6 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { ClientProps } from "models/testimonials";
+import { ImageInterface } from "models/image";
 import React from "react";
+
+export interface ClientProps {
+  id: number;
+  name: string;
+  company: string;
+  text: string;
+  image: ImageInterface;
+}
 
 const Client = (props: ClientProps) => {
   return (

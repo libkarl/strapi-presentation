@@ -8,8 +8,8 @@ export type HomePageComponents = {
 
 export type AboutPageComponents = {
   Type:
-    | "homepage.testimonials"
-    | "homepage.contact"
-    | "homepage.introduction"
-    | "homepage.latestnews";
+    | "about.banner"
+    | "about.processflow"
+    | "about.workingfocus"
+    | "about.team";
 };

@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1600);
+    }, 1200);
   }, []);
 
   return <>{!loading ? <Component {...pageProps} /> : <Preloader />}</>;

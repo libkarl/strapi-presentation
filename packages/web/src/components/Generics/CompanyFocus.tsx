@@ -1,5 +1,10 @@
-import { FocusProps } from "models/introduction";
 import React from "react";
+
+export interface FocusProps {
+  id: number;
+  title: string;
+  text: string;
+}
 
 const CompanyFocus = (props: FocusProps) => {
   return (

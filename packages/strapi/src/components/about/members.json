@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_about_members",
+  "info": {
+    "displayName": "members",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "instagramURL": {
+      "type": "string",
+      "required": false
+    },
+    "twitterURL": {
+      "type": "string"
+    },
+    "linkedInURL": {
+      "type": "string"
+    },
+    "facebookURL": {
+      "type": "string"
+    }
+  }
+}

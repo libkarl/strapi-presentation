@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_workingfoci",
+  "info": {
+    "displayName": "workingfocus",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cards": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.cards",
+      "required": true,
+      "max": 3,
+      "min": 3
+    }
+  }
+}

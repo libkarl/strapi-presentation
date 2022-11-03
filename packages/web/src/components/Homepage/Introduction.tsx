@@ -1,7 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import { IntroductionProps } from "models/introduction";
-import CompanyFocus from "components/Generics/Homepage/CompanyFocus";
+import CompanyFocus, { FocusProps } from "components/Generics/CompanyFocus";
+import { ImageInterface } from "models/image";
+export interface IntroductionProps {
+  id: number;
+  __component: string;
+  title: string;
+  text: string;
+  focuses: FocusProps[];
+  image: ImageInterface;
+}
 
 const Introduction = (props: IntroductionProps) => {
   return (
