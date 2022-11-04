@@ -15,9 +15,15 @@ import Error from "components/Elements/404";
 import { HomePageComponents, AboutPageComponents } from "models/pages";
 
 export async function getServerSideProps(router: NextRouter) {
-  return {
-    props: { params: router.query },
-  };
+  if (typeof router.query === "number") {
+    return {
+      props: { params: { page: "articles", articleID: router.query } },
+    };
+  } else {
+    return {
+      props: { params: router.query },
+    };
+  }
 }
 
 const DynamicPage = ({ params }: any) => {
@@ -45,6 +51,16 @@ const DynamicPage = ({ params }: any) => {
               return null;
             }
             return <Component key={v4()} {...e} />;
+          } else if (params.page === "articles") {
+            const pageKind: AboutPageComponents = {
+              Type: e.__component,
+            };
+            const Component = aboutPageImportObject[pageKind.Type];
+            if (!Component) {
+              return null;
+            } else if (e.id === params.articleID) {
+              return <Component key={v4()} {...e} />;
+            }
           }
         })}
       </Layout>
