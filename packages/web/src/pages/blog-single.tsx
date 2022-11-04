@@ -1,8 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
+import Script from "next/script";
+import { v4 } from "uuid";
+import { useRouter } from "next/dist/client/router";
+import { DiscussionEmbed } from "disqus-react";
+import { CommentCount } from "disqus-react";
+import { urlObjectKeys } from "next/dist/shared/lib/utils";
 
 function BlogSingle() {
+  const router = useRouter();
+  console.log(router);
   return (
     <>
       <Layout>
@@ -130,106 +138,31 @@ function BlogSingle() {
                     <p />
                     <div className="border-bottom mt-50 mb-50" />
                   </div>
-                  <div className="mt-60">
-                    <h4 className="text-heading-2">Comments</h4>
-                    <div className="box-comments">
-                      <ul>
-                        <li>
-                          <div className="item-comment">
-                            <div className="blog-img-user">
-                              <div className="img-user img-user-round">
-                                <img
-                                  src="/assets/imgs/page/blog/single/user-1.png"
-                                  alt="Agon"
-                                />
-                              </div>
-                              <h4 className="text-heading-6 color-gray-900">
-                                Robert Fox
-                              </h4>
-                              <p className="text-body-small color-gray-500">
-                                August 25, 2022
-                              </p>
-                            </div>
-                            <div className="text-comment">
-                              White white dreamy drama tically place everything
-                              although. Place out apartment afternoon whimsical
-                              kinder, little romantic joy we flowers handmade.
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="item-comment">
-                            <div className="blog-img-user">
-                              <div className="img-user img-user-round">
-                                <img
-                                  src="/assets/imgs/page/blog/single/user-2.png"
-                                  alt="Agon"
-                                />
-                              </div>
-                              <h4 className="text-heading-6 color-gray-900">
-                                Robert Fox
-                              </h4>
-                              <p className="text-body-small color-gray-500">
-                                August 25, 2022
-                              </p>
-                            </div>
-                            <div className="text-comment">
-                              White white dreamy drama tically place everything
-                              although. Place out apartment afternoon whimsical
-                              kinder, little romantic joy we flowers handmade.
-                            </div>
-                          </div>
-                          <ul>
-                            <li>
-                              <div className="item-comment">
-                                <div className="blog-img-user">
-                                  <div className="img-user img-user-round">
-                                    <img
-                                      src="/assets/imgs/page/blog/single/user-3.png"
-                                      alt="Agon"
-                                    />
-                                  </div>
-                                  <h4 className="text-heading-6 color-gray-900">
-                                    Robert Fox
-                                  </h4>
-                                  <p className="text-body-small color-gray-500">
-                                    August 25, 2022
-                                  </p>
-                                </div>
-                                <div className="text-comment">
-                                  White white dreamy drama tically place
-                                  everything although. Place out apartment
-                                  afternoon whimsical kinder, little romantic
-                                  joy we flowers handmade.
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="border-bottom mt-50 mb-50" />
-                    <h4 className="text-heading-4 color-gray-900 mb-40">
-                      Leave a comment
-                    </h4>
-                    <div className="form-comment">
-                      <form action="#">
-                        <div className="form-group">
-                          <textarea
-                            className="input-comment"
-                            placeholder="Write a comment"
-                          />
-                        </div>
-                        <div className="row">
-                          <div className="col-lg-7 col-md-6 col-sm-5 text-end">
-                            <button className="btn btn-black shape-square btn-md text-body-text">
-                              Post comment
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+                  <div id="disqus_thread"></div>
+                  <Script id={v4()}>
+                    {` /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    
+                    var disqus_config = function () {
+                    this.page.url = document.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = document.location.href; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                     var d = document, s = d.createElement('script');
+                      s.src = 'https://strapiweb.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);})();
+                    `}
+                  </Script>
+                  <DiscussionEmbed
+                    shortname="example"
+                    config={{
+                      url: "document.location.href",
+                      identifier: "document.location.href",
+                    }}
+                  />
                 </div>
               </div>
             </div>

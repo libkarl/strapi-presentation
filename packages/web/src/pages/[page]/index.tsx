@@ -10,7 +10,7 @@ import useStrapiRequest, {
   usePageData,
   usePageData2,
 } from "lib/api/useStrapiRequest";
-import { NextRouter } from "next/dist/client/router";
+import { NextRouter, useRouter } from "next/dist/client/router";
 import Error from "components/Elements/404";
 import { HomePageComponents, AboutPageComponents } from "models/pages";
 
@@ -28,7 +28,6 @@ export async function getServerSideProps(router: NextRouter) {
 
 const DynamicPage = ({ params }: any) => {
   const { data, error } = usePageData2(params.page);
-
   if (error) {
     return <Error />;
   }
