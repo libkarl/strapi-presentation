@@ -1,15 +1,15 @@
 import { ImageInterface } from "models/image";
 
 export interface Articles {
-  data: Daum[];
-}
-
-export interface Daum {
-  id: number;
-  attributes: Article;
+  data: Article[];
 }
 
 export interface Article {
+  id: number;
+  attributes: ArticleProps;
+}
+
+export interface ArticleProps {
   author: string;
   date: string;
   createdAt: string;

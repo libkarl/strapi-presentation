@@ -2,8 +2,7 @@
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Logo from "components/Logo/Logo"
-
+import logo from "../../../public/assets/logo.svg";
 
 type HeaderProps = {
   handleOpen: () => void;
@@ -36,7 +35,11 @@ const Header = (props: HeaderProps) => {
               <div className="header-logo">
                 <Link href="/">
                   <a className="d-flex">
-                    <Logo />
+                    <img
+                      alt="logo"
+                      src={logo.src}
+                      style={{ minWidth: 120 }}
+                    ></img>
                   </a>
                 </Link>
               </div>

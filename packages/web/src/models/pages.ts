@@ -13,3 +13,7 @@ export type AboutPageComponents = {
     | "about.workingfocus"
     | "about.team";
 };
+
+export type SingleBlogPageComponents = {
+  Type: "singleblog.banner" | "singleblog.article";
+};

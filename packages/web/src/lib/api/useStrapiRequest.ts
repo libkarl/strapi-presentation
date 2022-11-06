@@ -70,7 +70,7 @@ export async function fetchPageData(name: string) {
     throw new Error("missing page name");
   }
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${name}?populate=deep`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}api${name}?populate=deep`
   );
   const json = await response.json();
   return json;
@@ -79,7 +79,7 @@ export async function fetchPageData(name: string) {
 export async function fetchPageData2(name: string) {
   const options = {
     method: "get",
-    url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/${name}?populate=deep`,
+    url: `${process.env.NEXT_PUBLIC_STRAPI_URL}/api${name}?populate=deep`,
   };
   const response = await axios(options).then((res) => {
     return res.data;

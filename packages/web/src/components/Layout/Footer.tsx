@@ -1,17 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
+import logo from "../../../public/assets/logo.svg";
 import Link from "next/link";
 const Footer = () => {
+  console.log(logo);
   return (
     <>
       <footer className="footer mt-50">
         <div className="container">
           <div className="footer-top">
             <div className="row">
-              <div className="col-md-4 col-sm-6 text-center text-md-start">
+              <div className="col-md-4 col-sm-6 text-center ">
                 <Link href="/">
-                  <a>
-                    <img alt="Agon" src="/assets/imgs/template/logo.svg" />
-                  </a>
+                  <div>
+                    <img
+                      alt="logo"
+                      src={logo.src}
+                      style={{ maxWidth: 140 }}
+                    ></img>
+                  </div>
                 </Link>
               </div>
               <div className="col-md-8 col-sm-6 text-center text-md-end">

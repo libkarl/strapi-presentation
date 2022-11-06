@@ -15,15 +15,9 @@ import Error from "components/Elements/404";
 import { HomePageComponents, AboutPageComponents } from "models/pages";
 
 export async function getServerSideProps(router: NextRouter) {
-  if (typeof router.query === "number") {
-    return {
-      props: { params: { page: "articles", articleID: router.query } },
-    };
-  } else {
-    return {
-      props: { params: router.query },
-    };
-  }
+  return {
+    props: { params: router.query },
+  };
 }
 
 const DynamicPage = ({ params }: any) => {
