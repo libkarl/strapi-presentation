@@ -11,6 +11,7 @@ export interface Article {
 
 export interface ArticleProps {
   author: string;
+  banner: Banner;
   date: string;
   createdAt: string;
   updatedAt: string;
@@ -23,6 +24,7 @@ export interface ArticleProps {
   subtitle: string;
   paragraph2: string;
   paragraph3: string;
+  paragraph4: string;
   articlename: string;
   foto: Foto;
   bigpicture: Bigpicture;
@@ -30,6 +32,7 @@ export interface ArticleProps {
   localizations: Localizations;
 }
 
+interface Banner extends ImageInterface {}
 interface Foto extends ImageInterface {}
 interface Bigpicture extends ImageInterface {}
 interface Smallpicture extends ImageInterface {}

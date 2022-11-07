@@ -33,7 +33,10 @@ const Latestnews = (props: LatestNewsProps) => {
       <div className="container mt-90">
         <div className="row">
           {props.articles.data?.slice(-3).map((item) => {
-            return <LatestNew key={item.id} {...item.attributes} />;
+            const uniquePath = `/articles/${item.id}`;
+            return (
+              <LatestNew key={item.id} {...item.attributes} path={uniquePath} />
+            );
           })}
         </div>
       </div>

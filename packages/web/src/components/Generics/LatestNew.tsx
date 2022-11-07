@@ -1,19 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import { Article } from "models/articless";
+import { ArticleProps } from "models/articless";
 
-const LatestNew = (props: Article) => {
+interface UniqueArticleProps extends ArticleProps {
+  path: string;
+}
+
+const LatestNew = (props: UniqueArticleProps) => {
   return (
     <div className="col-lg-4 col-sm-12 pr-30 mb-50">
       <div className="card-grid-style-4">
         <span className="tag-dot">{props.category}</span>
-        <Link href="/blog-single">
+        <Link href={props.path}>
           <a className="text-heading-4">{props.articlename}</a>
         </Link>
 
         <div className="grid-4-img color-bg-4">
-          <Link href="/blog-single">
+          <Link href={props.path}>
             <a>
               <img
                 src={

@@ -3,35 +3,20 @@
 import Link from "next/link";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { v4 } from "uuid";
+import Member, { MemberProps } from "./Member";
+
+export interface TeamSliderProps {
+  id: number;
+  __component: string;
+  title: string;
+  description: string;
+  members: MemberProps[];
+}
 
 SwiperCore.use([Autoplay, Navigation]);
-const TeamSlider = () => {
-  const data = [
-    {
-      img: "9.jpg",
-      avatar: "1.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-    },
-    {
-      img: "10.jpg",
-      avatar: "2.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-    },
-    {
-      img: "11.jpg",
-      avatar: "3.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-    },
-    {
-      img: "12.jpg",
-      avatar: "4.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-    },
-  ];
+const TeamSlider = (props: TeamSliderProps) => {
+  const sliderData = [props.members.slice(0, 4), props.members.slice(-4)];
 
   return (
     <>
@@ -51,158 +36,13 @@ const TeamSlider = () => {
             }}
             className="swiper-wrapper pb-70 pt-5"
           >
-            {data.map((item, i) => (
-              <SwiperSlide>
+            {sliderData.map((item) => (
+              <SwiperSlide key={v4()}>
                 <div className="swiper-slide active">
                   <div className="row">
-                    <div className="col-lg-3 col-md-6 col-sm-6">
-                      <div className="card-grid-style-5 hover-up">
-                        <div className="grid-5-img mb-15">
-                          <img
-                            src="/assets/imgs/page/about/1/team-1.png"
-                            alt="Agon"
-                          />
-                        </div>
-                        <span className="text-body-text-md color-gray-500">
-                          Marketing CEO
-                        </span>
-                        <h3 className="text-heading-5 mb-5 mt-5">
-                          Theresa Webb
-                        </h3>
-                        <p className="text-body-excerpt text-desc color-gray-500 mt-15 mb-20">
-                          Lorem ipsum dolor sit amet consectetur imp adipiscing
-                          elit justo
-                        </p>
-                        <span className="text-body-text-md color-gray-600">
-                          Let’s Connect
-                        </span>
-                        <div className="social-bottom">
-                          <Link href="#">
-                            <a className="icon-socials icon-facebook"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-twitter"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-instagram"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-linkedin"></a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-6">
-                      <div className="card-grid-style-5 hover-up">
-                        <div className="grid-5-img mb-15">
-                          <img
-                            src="/assets/imgs/page/about/1/team-2.png"
-                            alt="Agon"
-                          />
-                        </div>
-                        <span className="text-body-text-md color-gray-500">
-                          Marketing CEO
-                        </span>
-                        <h3 className="text-heading-5 mb-5 mt-5">
-                          Theresa Webb
-                        </h3>
-                        <p className="text-body-excerpt text-desc color-gray-500 mt-15 mb-20">
-                          Lorem ipsum dolor sit amet consectetur imp adipiscing
-                          elit justo
-                        </p>
-                        <span className="text-body-text-md color-gray-600">
-                          Let’s Connect
-                        </span>
-                        <div className="social-bottom">
-                          <Link href="#">
-                            <a className="icon-socials icon-facebook"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-twitter"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-instagram"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-linkedin"></a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-6">
-                      <div className="card-grid-style-5 hover-up">
-                        <div className="grid-5-img mb-15">
-                          <img
-                            src="/assets/imgs/page/about/1/team-3.png"
-                            alt="Agon"
-                          />
-                        </div>
-                        <span className="text-body-text-md color-gray-500">
-                          Marketing CEO
-                        </span>
-                        <h3 className="text-heading-5 mb-5 mt-5">
-                          Theresa Webb
-                        </h3>
-                        <p className="text-body-excerpt text-desc color-gray-500 mt-15 mb-20">
-                          Lorem ipsum dolor sit amet consectetur imp adipiscing
-                          elit justo
-                        </p>
-                        <span className="text-body-text-md color-gray-600">
-                          Let’s Connect
-                        </span>
-                        <div className="social-bottom">
-                          <Link href="#">
-                            <a className="icon-socials icon-facebook"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-twitter"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-instagram"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-linkedin"></a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-sm-6">
-                      <div className="card-grid-style-5 hover-up">
-                        <div className="grid-5-img mb-15">
-                          <img
-                            src="/assets/imgs/page/about/1/team-4.png"
-                            alt="Agon"
-                          />
-                        </div>
-                        <span className="text-body-text-md color-gray-500">
-                          Marketing CEO
-                        </span>
-                        <h3 className="text-heading-5 mb-5 mt-5">
-                          Theresa Webb
-                        </h3>
-                        <p className="text-body-excerpt text-desc color-gray-500 mt-15 mb-20">
-                          Lorem ipsum dolor sit amet consectetur imp adipiscing
-                          elit justo
-                        </p>
-                        <span className="text-body-text-md color-gray-600">
-                          Let’s Connect
-                        </span>
-                        <div className="social-bottom">
-                          <Link href="#">
-                            <a className="icon-socials icon-facebook"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-twitter"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-instagram"></a>
-                          </Link>
-                          <Link href="#">
-                            <a className="icon-socials icon-linkedin"></a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+                    {item.map((member) => {
+                      return <Member key={v4()} {...member} />;
+                    })}
                   </div>
                 </div>
               </SwiperSlide>

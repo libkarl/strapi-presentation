@@ -2,36 +2,42 @@
 import Layout from "components/Layout/Layout";
 import React from "react";
 import { v4 } from "uuid";
-import {
-  homePageImportObject,
-  aboutPageImportObject,
-} from "models/dynamic-imports";
-import useStrapiRequest, {
-  usePageData,
-  usePageData2,
-} from "lib/api/useStrapiRequest";
 import { NextRouter, useRouter } from "next/dist/client/router";
-import Error from "components/Elements/404";
-import { HomePageComponents, AboutPageComponents } from "models/pages";
-import { Article } from "models/articless";
-import Banner from "components/About/Banner";
-import ArticleBanner from "components/SingleArticle/ArticleBanner";
 import { Article as ArticleComponent } from "components/SingleArticle/Article";
+import { useArticlesCollectionData } from "lib/api/useStrapiApi";
+import Error from "components/Elements/404";
 
-const BlogPage = () => {
+export async function getServerSideProps(router: NextRouter) {
+  return {
+    props: { params: router.query },
+  };
+}
+
+const DynamicArticlePage = ({ params }: any) => {
   const router = useRouter();
-  console.log(router.query.id);
-  const { data, error } = usePageData2(router.pathname);
+  let path = router.query.id?.toString();
+  if (path !== undefined) {
+    path =
+      process.env.NEXT_PUBLIC_VERCEL_URL +
+      router.pathname.replaceAll("[id]", path);
+  }
+  const { data, error } = useArticlesCollectionData(params.id);
+  if (error) {
+    return <Error />;
+  }
 
-  if (router.query.id === "1")
-    return (
-      <>
-        <Layout>
-          <ArticleBanner key={v4()} />
-          <ArticleComponent key={v4()} />
-        </Layout>
-      </>
-    );
+  return (
+    <>
+      <Layout>
+        <ArticleComponent
+          key={v4()}
+          {...data?.data.attributes}
+          articleURL={path}
+          articleID={router.query.id}
+        />
+      </Layout>
+    </>
+  );
 };
 
-export default BlogPage;
+export default DynamicArticlePage;

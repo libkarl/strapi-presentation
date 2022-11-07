@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_contact_locations",
+  "info": {
+    "displayName": "Locations",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "addresses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.address"
+    }
+  }
+}

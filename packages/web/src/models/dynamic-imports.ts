@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
+import React from "react";
 
-export let homePageImportObject = {
+export let ImportObject: { [key: string]: React.ComponentType<any> } = {
   "homepage.testimonials": dynamic(
     () => import("components/Homepage/Testimonials"),
     {
@@ -22,9 +23,6 @@ export let homePageImportObject = {
       suspense: true,
     }
   ),
-};
-
-export let aboutPageImportObject = {
   "about.banner": dynamic(() => import("components/About/Banner"), {
     suspense: true,
   }),
@@ -35,6 +33,13 @@ export let aboutPageImportObject = {
     suspense: true,
   }),
   "about.team": dynamic(() => import("components/About/Team"), {
+    suspense: true,
+  }),
+  "contact.banner": dynamic(() => import("components/Contact/ContactBanner"), {
+    suspense: true,
+  }),
+
+  "contact.locations": dynamic(() => import("components/Generics/Locations"), {
     suspense: true,
   }),
 };

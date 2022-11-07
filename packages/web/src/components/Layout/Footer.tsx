@@ -2,7 +2,6 @@
 import logo from "../../../public/assets/logo.svg";
 import Link from "next/link";
 const Footer = () => {
-  console.log(logo);
   return (
     <>
       <footer className="footer mt-50">
