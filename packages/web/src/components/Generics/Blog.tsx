@@ -1,34 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
+import { Article } from "models/articless";
 import Link from "next/link";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+type ArchiveProps = {
+  archive: Article[];
+};
+
 SwiperCore.use([Autoplay, Navigation]);
-const BlogSlider = () => {
-  const data = [
-    {
-      img: "9.jpg",
-      avatar: "1.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-      event: "Marketing Event",
-    },
-    {
-      img: "10.jpg",
-      avatar: "2.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-      event: "Social Media Event",
-    },
-    {
-      img: "10.jpg",
-      avatar: "2.jpg",
-      title: "Liguid Wave",
-      author: "Sound Box",
-      event: "Hackathlon",
-    },
-  ];
+const BlogSlider = (props: ArchiveProps) => {
+  const data = props.archive.slice(-3);
 
   return (
     <>
@@ -68,32 +51,34 @@ const BlogSlider = () => {
                         </div>
                         <div className="col-xl-6 col-lg-12">
                           <div className="right-news card-grid-style-4 mb-0">
-                            <span className="tag-dot">{item.event}</span>
+                            <span className="tag-dot">
+                              {item.attributes.category}
+                            </span>
                             <Link href="/blog-single">
                               <a className="text-heading-4">
-                                We can blend colors multiple ways, the most
-                                common
+                                {item.attributes.articlename}
                               </a>
                             </Link>
 
                             <p className="text-body-text color-gray-500 text-desc-fix-h">
-                              Lorem ipsum dolor sit amet consectetur adipiscing
-                              elit interdum ullamcorper sed pharetra senectus
-                              donec nunc. Consequat semper viverra nam libero
-                              justo laoreet facilisis magna etiam.
+                              {item.attributes.articleintro}
                             </p>
                             <div className="blog-img-user">
                               <div className="img-user img-user-round">
                                 <img
-                                  src="/assets/imgs/page/blog/2/user-1.png"
+                                  src={
+                                    process.env.NEXT_PUBLIC_STRAPI_URL +
+                                    item.attributes.bigpicture?.data.attributes
+                                      .url
+                                  }
                                   alt="Agon"
                                 />
                               </div>
                               <h4 className="text-heading-6 color-gray-900">
-                                Jenny Wilson
+                                {item.attributes.author}
                               </h4>
                               <p className="text-body-small color-gray-500">
-                                August 25, 2022
+                                {item.attributes.date}
                               </p>
                             </div>
                           </div>

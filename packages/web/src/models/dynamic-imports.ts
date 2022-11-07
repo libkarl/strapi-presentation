@@ -42,4 +42,22 @@ export let ImportObject: { [key: string]: React.ComponentType<any> } = {
   "contact.locations": dynamic(() => import("components/Generics/Locations"), {
     suspense: true,
   }),
+  "service.companies": dynamic(() => import("components/Service/Companies"), {
+    suspense: true,
+  }),
+  "service.listofservices": dynamic(
+    () => import("components/Service/ListOfServices"),
+    {
+      suspense: true,
+    }
+  ),
+  "service.offers": dynamic(() => import("components/Service/Offers"), {
+    suspense: true,
+  }),
+  "service.servicebanner": dynamic(
+    () => import("components/Service/ServiceBanner"),
+    {
+      suspense: true,
+    }
+  ),
 };

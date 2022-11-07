@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_services_companies",
+  "info": {
+    "displayName": "companies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "partners": {
+      "displayName": "Logo",
+      "type": "component",
+      "repeatable": true,
+      "component": "services.logo",
+      "required": true
+    }
+  }
+}

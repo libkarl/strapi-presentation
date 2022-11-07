@@ -25,9 +25,7 @@ function Blog() {
               <div className="col-lg-1 col-sm-1 col-12" />
             </div>
           </div>
-          <div className="container mt-70">
-            <BlogSlider />
-          </div>
+          <div className="container mt-70"></div>
         </section>
         <section className="section-box">
           <div className="container mt-30">

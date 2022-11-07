@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blog_archive_latestarticles",
+  "info": {
+    "displayName": "latestarticles",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "blog-archive.latestarticles",
+        "blog-archive.archive"
+      ]
+    }
+  }
+}

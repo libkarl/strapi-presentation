@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_services_offers",
+  "info": {
+    "displayName": "offers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "offers": {
+      "displayName": "servicecards",
+      "type": "component",
+      "repeatable": true,
+      "component": "services.servicecards",
+      "required": true
+    }
+  }
+}

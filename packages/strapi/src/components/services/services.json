@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_services_services",
+  "info": {
+    "displayName": "services",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
