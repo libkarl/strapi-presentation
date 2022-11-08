@@ -2,7 +2,7 @@
 import Layout from "components/Layout/Layout";
 import React from "react";
 import { v4 } from "uuid";
-import { ImportObject } from "models/dynamic-imports";
+import { ImportObject } from "components";
 import { NextRouter, useRouter } from "next/dist/client/router";
 import Error from "components/Elements/404";
 import { usePageData } from "lib/api/useStrapiApi";

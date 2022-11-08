@@ -3,6 +3,7 @@ import BackToTopp from "../Elements/BackToTop";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Head from "next/head";
 
 const Layout = ({ children, headerStyle }: any) => {
   const [openClass, setOpenClass] = useState("");
@@ -21,6 +22,10 @@ const Layout = ({ children, headerStyle }: any) => {
   };
   return (
     <>
+      <Head>
+        <title>ngnir</title>
+        <link rel="icon" href="../../../public/assets/mark.png" />
+      </Head>
       <div className={openClass && "body-overlay-1"} onClick={handleRemove} />
 
       <Header handleOpen={handleOpen} headerStyle={headerStyle} />
