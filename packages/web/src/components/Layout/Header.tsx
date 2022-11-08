@@ -59,7 +59,7 @@ const Header = (props: HeaderProps) => {
                     </li>
 
                     <li>
-                      <Link href="/blog-archive">
+                      <Link href="/blog">
                         <a>Blog</a>
                       </Link>
                     </li>

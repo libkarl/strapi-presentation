@@ -34,58 +34,90 @@ const Contact = (props: ContactProps) => {
             {props.address.map((item) => {
               return <AddressComponent key={item.id} {...item} />;
             })}
+
             <div className="col-lg-8">
               <div className="row">
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Enter your name"
-                    />
+                <form
+                  className="row"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="d04b4e14-0113-4c70-99ff-389ffc2c1d6e"
+                  ></input>
+                  <div className="col-lg-6">
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        className="form-control"
+                        placeholder="Enter your name"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Comapy (optioanl)"
-                    />
+                  <div className="col-lg-6">
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        name="company"
+                        className="form-control"
+                        placeholder="Company (optioanl)"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <input className="form-control" placeholder="Your email" />
+                  <div className="col-lg-6">
+                    <div className="form-group">
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        className="form-control"
+                        placeholder="Your email"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Phone number"
-                    />
+                  <div className="col-lg-6">
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        name="phone"
+                        className="form-control"
+                        placeholder="Phone number"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-12">
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      placeholder="Tell us about yourself"
-                    />
+                  <div className="col-lg-12">
+                    <div className="form-group">
+                      <textarea
+                        name="message"
+                        required
+                        className="form-control"
+                        placeholder="Tell us about yourself"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-12 mt-15">
-                  <button
-                    className="btn btn-black icon-arrow-right-white mr-40 mb-20"
-                    type="submit"
-                  >
-                    Send Message
-                  </button>
-                  <br className="d-lg-none d-block" />
-                  <span className="text-body-text-md color-gray-500 mb-20">
-                    By clicking contact us button, you agree our terms and
-                    policy,
-                  </span>
-                </div>
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://web3forms.com/success"
+                  ></input>
+                  <div className="col-lg-12 mt-15">
+                    <button
+                      className="btn btn-black icon-arrow-right-white mr-40 mb-20"
+                      type="submit"
+                    >
+                      Send Message
+                    </button>
+                    <br className="d-lg-none d-block" />
+                    <span className="text-body-text-md color-gray-500 mb-20">
+                      By clicking contact us button, you agree our terms and
+                      policy,
+                    </span>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

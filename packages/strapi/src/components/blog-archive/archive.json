@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blog_archive_archives",
   "info": {
-    "displayName": "archive"
+    "displayName": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,6 +10,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
     }
   }
 }

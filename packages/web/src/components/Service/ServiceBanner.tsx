@@ -24,13 +24,13 @@ const ServiceBanner = (props: CompaniesProps) => {
                 {props.text}
               </p>
               <div className="mt-40">
-                <Link href="/page-about-1">
+                <Link href="/contact">
                   <a className="btn btn-black shape-square icon-arrow-right-white">
                     Get Started
                   </a>
                 </Link>
 
-                <Link href="/page-pricing-1">
+                <Link href="/about#explanation">
                   <a className="btn btn-link icon-triangle color-gray-900 ml-40">
                     How it works
                   </a>

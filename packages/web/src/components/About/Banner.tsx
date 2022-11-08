@@ -32,13 +32,13 @@ const Banner = (props: BannerProps) => {
                   {props.text}
                 </p>
                 <div className="mt-40">
-                  <Link href="/page-service-1">
+                  <Link href="/service">
                     <a className="btn btn-black shape-square icon-arrow-right-white">
-                      Join Our Team
+                      Learn More
                     </a>
                   </Link>
 
-                  <Link href="/page-contact">
+                  <Link href="/contact">
                     <a className="btn btn-link color-gray-900 icon-arrow-right text-heading-6">
                       Contact Us
                     </a>
@@ -46,7 +46,7 @@ const Banner = (props: BannerProps) => {
                 </div>
               </div>
               <div className="col-lg-5 d-none d-lg-block">
-                <div className="banner-imgs">
+                <div className="2xl:hidden banner-imgs">
                   <div className="block-1 shape-1">
                     <img
                       src={
@@ -57,7 +57,7 @@ const Banner = (props: BannerProps) => {
                     />
                   </div>
                   <img
-                    className="img-responsive shape-2"
+                    className="img-responsive shape-2 "
                     alt="Agon"
                     src={
                       process.env.NEXT_PUBLIC_STRAPI_URL +
@@ -112,7 +112,7 @@ const Banner = (props: BannerProps) => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-1" />
+            <div id="explanation" className="col-lg-1" />
           </div>
         </div>
       </div>

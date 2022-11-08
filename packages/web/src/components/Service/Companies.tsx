@@ -15,7 +15,7 @@ const Companies = (props: CompaniesProps) => {
     <section className="section-box overflow-visible mt-70">
       <div className="container">
         <h2 className="text-heading-3 text-center color-gray-900 mb-60">
-          Trusted by the world’s leading companies
+          {props.title}
         </h2>
         <div className="row">
           <div className="col-lg-12">

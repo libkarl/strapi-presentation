@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="footer-top">
             <div className="row">
               <div className="col-md-4 col-sm-6 text-center ">
-                <Link href="/">
+                <Link href="/contact">
                   <div>
                     <img
                       alt="logo"
@@ -23,7 +23,7 @@ const Footer = () => {
                 <span className="color-gray-900 text-heading-6 mr-30 text-mb-sm-20">
                   Ready to get started?
                 </span>
-                <Link href="/page-signup">
+                <Link href="/contact">
                   <a className="btn btn-square">Let&apos;s talk</a>
                 </Link>
               </div>

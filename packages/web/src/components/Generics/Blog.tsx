@@ -4,10 +4,11 @@ import { Article } from "models/articless";
 import Link from "next/link";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { v4 } from "uuid";
 
-type ArchiveProps = {
+interface ArchiveProps {
   archive: Article[];
-};
+}
 
 SwiperCore.use([Autoplay, Navigation]);
 const BlogSlider = (props: ArchiveProps) => {
@@ -15,7 +16,7 @@ const BlogSlider = (props: ArchiveProps) => {
 
   return (
     <>
-      <div className="slider-news">
+      <div key={v4()} className="slider-news">
         <div className="swiper-container swiper-group-1">
           <Swiper
             slidesPerView={1}
@@ -23,7 +24,7 @@ const BlogSlider = (props: ArchiveProps) => {
             loop={true}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
             navigation={{
               prevEl: ".swiper-button-prev-5",
@@ -32,7 +33,7 @@ const BlogSlider = (props: ArchiveProps) => {
             className="swiper-wrapper pb-70 pt-5"
           >
             {data.map((item, i) => (
-              <SwiperSlide>
+              <SwiperSlide key={"blog_" + item.id}>
                 <div className="swiper-slide active">
                   <div className="block-news">
                     <div className="item-news">
@@ -42,7 +43,11 @@ const BlogSlider = (props: ArchiveProps) => {
                             <Link href="/blog-single">
                               <a>
                                 <img
-                                  src="/assets/imgs/page/blog/1/img-1.png"
+                                  src={
+                                    process.env.NEXT_PUBLIC_STRAPI_URL +
+                                    item.attributes.bigpicture?.data.attributes
+                                      .url
+                                  }
                                   alt="Agon"
                                 />
                               </a>
@@ -68,8 +73,7 @@ const BlogSlider = (props: ArchiveProps) => {
                                 <img
                                   src={
                                     process.env.NEXT_PUBLIC_STRAPI_URL +
-                                    item.attributes.bigpicture?.data.attributes
-                                      .url
+                                    item.attributes.foto?.data.attributes.url
                                   }
                                   alt="Agon"
                                 />

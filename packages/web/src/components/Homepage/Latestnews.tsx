@@ -24,7 +24,7 @@ const Latestnews = (props: LatestNewsProps) => {
             </p>
           </div>
           <div className="col-lg-4 text-lg-end text-start pt-30">
-            <Link href="/blog-1">
+            <Link href="/blog">
               <a className="btn btn-black icon-arrow-right-white">View More</a>
             </Link>
           </div>

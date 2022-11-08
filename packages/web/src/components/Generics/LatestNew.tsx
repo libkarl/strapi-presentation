@@ -16,7 +16,7 @@ const LatestNew = (props: UniqueArticleProps) => {
           <a className="text-heading-4">{props.articlename}</a>
         </Link>
 
-        <div className="grid-4-img color-bg-4">
+        <div className="grid-4-img color-bg-6">
           <Link href={props.path}>
             <a>
               <img

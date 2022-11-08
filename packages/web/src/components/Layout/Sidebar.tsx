@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
-import { FaBeer } from "react-icons/fa";
+import mark from "../../../public/assets/mark.png";
 
 const Sidebar = ({ openClass }: any) => {
   const [isActive, setIsActive] = useState({
@@ -32,10 +32,10 @@ const Sidebar = ({ openClass }: any) => {
         <PerfectScrollbar className="mobile-header-wrapper-inner w-4/5 sm:w-full">
           <div className="mobile-header-top">
             <div className="user-account">
-              <FaBeer size={30} />
+              <img alt="logo" src={mark.src} style={{ width: 30 }}></img>
               <div className="content ml-6">
                 <h6 className="user-name">
-                  Hi from <span className="text-brand">Agon company !</span>
+                  Hi from <span className="text-brand">Ngnir !</span>
                 </h6>
               </div>
             </div>

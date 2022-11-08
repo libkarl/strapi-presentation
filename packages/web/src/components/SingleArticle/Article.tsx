@@ -2,8 +2,9 @@
 import { DiscussionEmbed } from "disqus-react";
 import { CommentCount } from "disqus-react";
 import { ArticleProps } from "models/articless";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Script from "next/script";
+import ThreadDynamic from "components/Disqus/ThreadDynamic";
 
 interface SingleArticleInterface extends ArticleProps {
   articleID: string;
@@ -18,20 +19,9 @@ export const Article = (props: SingleArticleInterface) => {
     day: "numeric",
   };
   const articleDate = new Date(props.date);
-  console.log({
-    url: props.articleURL,
-    identifier: props.articleID,
-    title: props.articlename,
-  });
-  const commentCountPath = `${props.articleURL}#disqus_thread`;
 
   return (
     <>
-      <Script
-        id="dsq-count-scr"
-        src="//strapiweb.disqus.com/count.js"
-        async
-      ></Script>
       <section className="section-box">
         <div
           className="banner-hero banner-head-image"
@@ -79,18 +69,6 @@ export const Article = (props: SingleArticleInterface) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-5 col-sm-5 col-5 tag-mb text-end">
-                  <span className="tag-1 bg-6 color-green-900 mt-40">
-                    <CommentCount
-                      shortname="strapiweb"
-                      config={{
-                        url: props.articleURL,
-                        identifier: props.articleID,
-                        title: props.articlename,
-                      }}
-                    ></CommentCount>
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -109,7 +87,7 @@ export const Article = (props: SingleArticleInterface) => {
                 <p />
                 <p>{props.articleintro}</p>
                 <h2 className="text-heading-3">{props.title}</h2>
-                <p>{props.paragraph1}</p>
+                <p id="testid">{props.paragraph1}</p>
                 <p />
                 <p />
                 <h3 className="text-heading-4">{props.subtitle}</h3>
@@ -135,7 +113,8 @@ export const Article = (props: SingleArticleInterface) => {
                 <p />
                 <div className="border-bottom mt-50 mb-50" />
               </div>
-              <DiscussionEmbed
+
+              <ThreadDynamic
                 shortname="strapiweb"
                 config={{
                   url: props.articleURL,

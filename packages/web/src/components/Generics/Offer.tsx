@@ -6,6 +6,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export interface OfferProps {
+  id: string;
   title: string;
   text: string;
   icon: ImageInterface;
@@ -36,7 +37,7 @@ const OfferSlider = (props: SwiperData) => {
             className="swiper-wrapper pb-70 pt-5"
           >
             {props.offers.map((item) => (
-              <SwiperSlide>
+              <SwiperSlide key={"swiperOffer_" + item.id}>
                 <div className="swiper-slide">
                   <div className="card-grid-style-2 hover-up">
                     <div className="grid-2-img">
