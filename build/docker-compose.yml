@@ -5,6 +5,6 @@ services:
     build:
       context: ../packages/strapi
       dockerfile: ../../build/Dockerfile.strapi
-    image: huttarichard/ngnir
+    image: karldeveloper/ngnir
     ports:
       - "1337:1337"
