@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  strapi:
+    image: karldeveloper/ngnir
+    ports:
+      - "80:1337"
+    environment:
+      - DATABASE_FILENAME=data.db
+      - APP_KEYS=D4e6NynlbqyUQMloRhP9FA==,SpcZ6Zg1wtuooVHD+CUo7Q==,QucHxH5sPi1e0GIEfzjHng==,twCy0+DI7xzuen2CO9EBWA==
+      - API_TOKEN_SALT=OdMODFAHiiAwqHLZZNXsSA==
+      - ADMIN_JWT_SECRET=Szhl4Zjt8uWEe28rSR5CDA==
+      - JWT_SECRET=4pgcHu2hDESYqTWeRebkjw==
+    volumes:
+      - "/root/data.db:/opt/data.db"
+      - "/root/uploads:/opt/public"
