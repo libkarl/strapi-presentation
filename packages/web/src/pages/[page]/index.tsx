@@ -15,7 +15,6 @@ export async function getServerSideProps(router: NextRouter) {
 
 const DynamicPage = ({ params }: any) => {
   const { data, error } = usePageData(params.page);
-  console.log(data);
   if (error) {
     return <Error />;
   }

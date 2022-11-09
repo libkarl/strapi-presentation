@@ -9,7 +9,6 @@ const Layout = ({ children, headerStyle }: any) => {
   const [openClass, setOpenClass] = useState("");
 
   const handleOpen = () => {
-    console.log("Handle open works");
     document.body.classList.add("mobile-menu-active");
     setOpenClass("sidebar-visible");
   };

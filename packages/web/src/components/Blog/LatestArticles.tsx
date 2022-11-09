@@ -11,7 +11,6 @@ export interface LatestArticlesProps {
 }
 
 const LatestArticles = (props: LatestArticlesProps) => {
-  console.log(Array.isArray(props.articles.data));
   return (
     <section className="section-box">
       <div className="container mt-70">
