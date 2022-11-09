@@ -33,7 +33,7 @@ const Introduction = (props: IntroductionProps) => {
               {props.text}
             </p>
             <div className="line-bd-green mt-50" />
-            <div className="row">
+            <div className="row ">
               {props.focuses?.map((item) => {
                 return <CompanyFocus key={item.id} {...item} />;
               })}

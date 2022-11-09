@@ -23,7 +23,7 @@ const Layout = ({ children, headerStyle }: any) => {
     <>
       <Head>
         <title>ngnir</title>
-        <link rel="icon" href="../../../public/assets/mark.png" />
+        <link rel="icon" href="/mark.ico" />
       </Head>
       <div className={openClass && "body-overlay-1"} onClick={handleRemove} />
 
