@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 import CompanyFocus, { FocusProps } from "components/Generics/CompanyFocus";
@@ -17,15 +18,13 @@ const Introduction = (props: IntroductionProps) => {
       <div className="container mt-120">
         <div className="row">
           <div className="col-lg-6 col-sm-12 block-img-we-do">
-            <Image
-              layout="fill"
-              priority={true}
+            <img
               className="bdrd-16 img-responsive"
               src={
                 process.env.NEXT_PUBLIC_STRAPI_URL +
                 props.image?.data.attributes.url
               }
-              alt="Agon"
+              alt="introduction"
             />
           </div>
           <div className="col-lg-6 col-sm-12 block-we-do">
