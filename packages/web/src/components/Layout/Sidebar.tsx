@@ -55,7 +55,7 @@ const Sidebar = ({ openClass }: any) => {
                       <Link href="/service">Services</Link>
                     </li>
                     <li>
-                      <Link href="/blog-archive">Blog</Link>
+                      <Link href="/blog">Blog</Link>
                     </li>
                     <li>
                       <Link href="/contact">Contact</Link>
