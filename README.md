@@ -15,3 +15,5 @@ This project involves both the frontend and backend of an example website, with 
 9. SWR hook + Axios for data fetching - https://swr.vercel.app/ + https://axios-http.com/docs/intro
 10. Docker / Docker Compose / Docker Hub - https://docs.docker.com/
 11. Digital Ocean - https://www.digitalocean.com/
+12. Disqus service for managing comments - https://disqus.com
+13. Web3Form for sendig emails - https://web3forms.com/
